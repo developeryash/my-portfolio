@@ -10,3 +10,16 @@ window.onscroll = function() {
         header.classList.remove('navbarDark');
     }
 }
+function sendEmail(){
+    let parms={
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+
+
+    }
+    emailjs.send("service_rcber6m","template_csms3ai",parms).then(alert("Email sent!!"))
+  
+    
+}
